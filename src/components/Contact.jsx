@@ -4,9 +4,9 @@ import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
 import './Contact.css';
 
 const contactLinks = [
-  { icon: <FiMail size={15} />, label: 'imranmaniyar419@gmail.com', href: 'mailto:imaniyar090@gmail.com' },
-  { icon: <FiGithub size={15} />, label: 'gitlab.com/imranmaniyar', href: 'https://gitlab.com/imranmaniyar' },
-  { icon: <FiLinkedin size={15} />, label: 'linkedin.com/in/imranmaniyar', href: 'https://linkedin.com/in/imranmaniyar' },
+  { icon: <FiMail size={15} />, label: 'imranmaniyar419@gmail.com', href: 'mailto:imranmaniyar419@gmail.com' },
+  { icon: <FiGithub size={15} />, label: 'gitlab.com/imranmaniyar', href: 'https://github.com/Imran4819' },
+  { icon: <FiLinkedin size={15} />, label: 'linkedin.com/in/imranmaniyar', href: 'https://www.linkedin.com/in/imran-maniyar-7b6862321 ' },
 ];
 
 function Contact() {
