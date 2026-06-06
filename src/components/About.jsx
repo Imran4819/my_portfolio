@@ -23,7 +23,7 @@ function About() {
               Developer. Problem solver. Builder.
             </h2>
             <p className="about__text">
-              I'm a Backend Developer and Junior Software Intern at The Baap
+              I'm a Full Stack Developer and Junior Software Intern at The Baap
               Company, with hands-on experience building scalable microservices
               and enterprise applications using Java Spring Boot, Node.js, and
               Fastify.
