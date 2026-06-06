@@ -1,0 +1,97 @@
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--accent-bg);
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.project-card__name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.project-card__links {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.project-card__links a {
+  color: var(--text-faint);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.project-card__links a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.project-card__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.project-card__stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stack-tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  background: var(--bg-muted);
+  transition: all 0.2s ease;
+}
+
+.stack-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-card);
+}
+
+@media (max-width: 900px) {
+  .projects__list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
