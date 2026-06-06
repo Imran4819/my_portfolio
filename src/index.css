@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title, .navbar__logo {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* ── 1. CLEAN LIGHT ── professional & crisp */
+body.theme-light {
+  --bg: #fafaf9;
+  --bg-card: #ffffff;
+  --bg-muted: #f4f4f5;
+  --text: #09090b;
+  --text-muted: #4b5563;
+  --text-faint: #9ca3af;
+  --border: #e4e4e7;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-bg: rgba(79, 70, 229, 0.08);
+  --shadow: 0 4px 24px -2px rgba(9, 9, 11, 0.04), 0 2px 8px -1px rgba(9, 9, 11, 0.02);
+  --glass-bg: rgba(250, 250, 249, 0.85);
+  --glass-border: rgba(228, 228, 231, 0.7);
+  --btn-text: #ffffff;
+}
+
+/* ── 2. PURE DARK ── sleek developer dark */
+body.theme-dark {
+  --bg: #0b0f17;
+  --bg-card: #111827;
+  --bg-muted: #1f2937;
+  --text: #f9fafb;
+  --text-muted: #cbd5e1;
+  --text-faint: #64748b;
+  --border: #27272a;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-bg: rgba(99, 102, 241, 0.15);
+  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(11, 15, 23, 0.85);
+  --glass-border: rgba(39, 39, 42, 0.7);
+  --btn-text: #ffffff;
+}
+
+/* ── 3. NEON CYBER ── hacker terminal style */
+body.theme-neon {
+  --bg: #05070a;
+  --bg-card: #0c0f14;
+  --bg-muted: #161b22;
+  --text: #00ff88;
+  --text-muted: #00cc66;
+  --text-faint: #006633;
+  --border: #00331a;
+  --accent: #00ff88;
+  --accent-hover: #33ffa3;
+  --accent-bg: rgba(0, 255, 136, 0.1);
+  --shadow: 0 0 15px rgba(0, 255, 136, 0.15);
+  --glass-bg: rgba(5, 7, 10, 0.85);
+  --glass-border: rgba(0, 51, 26, 0.8);
+  --btn-text: #05070a;
+}
+
+/* ── 4. WARM PAPER ── reader mode academia */
+body.theme-paper {
+  --bg: #f5f0e8;
+  --bg-card: #fdfaf6;
+  --bg-muted: #ede5d5;
+  --text: #2c1f0e;
+  --text-muted: #5c4731;
+  --text-faint: #a38c75;
+  --border: #dcd1bd;
+  --accent: #8b5a2b;
+  --accent-hover: #6f421b;
+  --accent-bg: rgba(139, 90, 43, 0.08);
+  --shadow: 0 4px 16px -2px rgba(44, 31, 14, 0.05);
+  --glass-bg: rgba(245, 240, 232, 0.85);
+  --glass-border: rgba(220, 209, 189, 0.8);
+  --btn-text: #fdfaf6;
+}
+
+/* ── 5. OCEAN DEEP ── deep blue & cyan */
+body.theme-ocean {
+  --bg: #040d16;
+  --bg-card: #091624;
+  --bg-muted: #102235;
+  --text: #e2f1f8;
+  --text-muted: #80a4c2;
+  --text-faint: #436685;
+  --border: #1b324b;
+  --accent: #00d4b8;
+  --accent-hover: #33edd5;
+  --accent-bg: rgba(0, 212, 184, 0.15);
+  --shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.6);
+  --glass-bg: rgba(4, 13, 22, 0.85);
+  --glass-border: rgba(27, 50, 75, 0.8);
+  --btn-text: #040d16;
+}
+
+/* ── 6. CANDY ── vibrant pink & purple */
+body.theme-candy {
+  --bg: #fff0f7;
+  --bg-card: #ffffff;
+  --bg-muted: #ffe3f1;
+  --text: #470032;
+  --text-muted: #9e2b71;
+  --text-faint: #d48ab8;
+  --border: #ffd0e7;
+  --accent: #ec4899;
+  --accent-hover: #db2777;
+  --accent-bg: rgba(236, 72, 153, 0.08);
+  --shadow: 0 4px 20px -2px rgba(236, 72, 153, 0.08);
+  --glass-bg: rgba(255, 240, 247, 0.85);
+  --glass-border: rgba(255, 208, 231, 0.8);
+  --btn-text: #ffffff;
+}
+
+/* ── 7. SOLARIZED ── warm low contrast */
+body.theme-solar {
+  --bg: #fdf6e3;
+  --bg-card: #eee8d5;
+  --bg-muted: #e4dbca;
+  --text: #073642;
+  --text-muted: #586e75;
+  --text-faint: #93a1a1;
+  --border: #d3c7a8;
+  --accent: #268bd2;
+  --accent-hover: #1f72ac;
+  --accent-bg: rgba(38, 139, 210, 0.08);
+  --shadow: 0 4px 16px -2px rgba(7, 54, 66, 0.05);
+  --glass-bg: rgba(253, 246, 227, 0.85);
+  --glass-border: rgba(211, 199, 168, 0.8);
+  --btn-text: #fdf6e3;
+}
+
+/* ── 8. VOLCANIC ── striking dark red & orange */
+body.theme-volcanic {
+  --bg: #0a0503;
+  --bg-card: #130906;
+  --bg-muted: #22120b;
+  --text: #ffd0b0;
+  --text-muted: #e07a3c;
+  --text-faint: #8f4215;
+  --border: #3a1b0e;
+  --accent: #ff5500;
+  --accent-hover: #ff7333;
+  --accent-bg: rgba(255, 85, 0, 0.15);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  --glass-bg: rgba(10, 5, 3, 0.85);
+  --glass-border: rgba(58, 27, 14, 0.8);
+  --btn-text: #0a0503;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+/* Selection highlight */
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
