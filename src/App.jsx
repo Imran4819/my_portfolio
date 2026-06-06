@@ -20,7 +20,7 @@ function App() {
         <Contact />
       </main>
       <footer className="footer">
-        <p>All Rights Reserverd ❤️ © {new Date().getFullYear()} Imran Maniyar</p>
+        <p> Imran Maniyar © All Rights Reserved ❤️ {new Date().getFullYear()}</p>
       </footer>
     </div>
   );
