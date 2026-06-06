@@ -20,7 +20,7 @@ function App() {
         <Contact />
       </main>
       <footer className="footer">
-        <p>Built with React.js &amp; ❤️ · © {new Date().getFullYear()} John Doe</p>
+        <p>All Rights Reserverd ❤️ © {new Date().getFullYear()} Imran Maniyar</p>
       </footer>
     </div>
   );
