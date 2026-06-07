@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -15,10 +15,18 @@ function App() {
   const [isMuted, setIsMuted] = useState(true);
   const isMobile = window.innerWidth <= 768;
 
+  useEffect(() => {
+    if (showIntro) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [showIntro]);
+
   return (
     <>
-      {/* The main app loads in the background while the video plays on top */}
-      <div className="app" style={{ height: showIntro ? '100vh' : 'auto', overflow: showIntro ? 'hidden' : 'visible' }}>
+      {/* The main app loads in the background normally so there is zero delay when video ends */}
+      <div className="app">
         <Navbar />
         <main className="main-content">
           <Hero />
