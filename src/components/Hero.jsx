@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import avatarImg from '../assets/avatar.png';
+import avatarImg from '../assets/avatar.jpg';
 import './Hero.css';
 
 function Hero() {
@@ -33,7 +33,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Backend Developer and Software Engineering Intern specializing in building high-performance microservices, robust REST APIs, and reliable distributed systems. Experiencing in Java Spring Boot, Node.js, Fastify, and PostgreSQL.
+            Full Stack Developer and Software Engineering Intern specializing in building high-performance microservices, robust REST APIs, and reliable distributed systems. Experiencing in Java Spring Boot, Node.js, Fastify, and PostgreSQL.
           </motion.p>
 
           <motion.div
