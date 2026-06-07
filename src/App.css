@@ -135,5 +135,9 @@
   
   .intro-video {
     object-fit: cover; 
+    /* Shift the video focus towards the right side to center the speaker on mobile */
+    object-position: 75% center;
+    /* Reset zoom for mobile as the mobile video usually doesn't have black borders */
+    transform: none;
   }
 }
