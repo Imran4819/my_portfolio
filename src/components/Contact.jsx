@@ -19,8 +19,16 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace this with your actual email/API logic
-    console.log('Form submitted:', form);
+    
+    // Format the WhatsApp message
+    const phoneNumber = "YOUR_WHATSAPP_NUMBER_HERE"; // e.g. "919876543210" (no +, no spaces)
+    const text = `Hello Imran!\n\nName: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+    
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+
     setSent(true);
     setForm({ name: '', email: '', message: '' });
     setTimeout(() => setSent(false), 4000);
