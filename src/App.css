@@ -99,6 +99,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Scales the video up by 5% to hide the baked-in black borders from the Teams recording */
+  transform: scale(1.05); 
 }
 
 .skip-btn {

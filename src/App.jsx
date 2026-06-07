@@ -12,19 +12,29 @@ import './App.css';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
   const isMobile = window.innerWidth <= 768;
 
   if (showIntro) {
     return (
       <div className="intro-video-container">
         <video 
+          key={isMobile ? 'mobile' : 'desktop'}
           className="intro-video" 
           autoPlay 
+          muted={isMuted}
           playsInline 
           onEnded={() => setShowIntro(false)}
         >
           <source src={isMobile ? mobileVideo : introVideo} type="video/mp4" />
         </video>
+        <button 
+          className="skip-btn" 
+          style={{ bottom: isMobile ? '70px' : '100px', backgroundColor: isMuted ? 'rgba(255, 60, 60, 0.4)' : 'rgba(60, 255, 60, 0.4)' }} 
+          onClick={() => setIsMuted(!isMuted)}
+        >
+          {isMuted ? '🔇 Unmute' : '🔊 Muted'}
+        </button>
         <button className="skip-btn" onClick={() => setShowIntro(false)}>Skip</button>
       </div>
     );
