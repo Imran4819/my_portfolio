@@ -15,46 +15,48 @@ function App() {
   const [isMuted, setIsMuted] = useState(true);
   const isMobile = window.innerWidth <= 768;
 
-  if (showIntro) {
-    return (
-      <div className="intro-video-container">
-        <video 
-          key={isMobile ? 'mobile' : 'desktop'}
-          className="intro-video" 
-          autoPlay 
-          muted={isMuted}
-          playsInline 
-          onEnded={() => setShowIntro(false)}
-        >
-          <source src={isMobile ? mobileVideo : introVideo} type="video/mp4" />
-        </video>
-        <button 
-          className="skip-btn" 
-          style={{ bottom: isMobile ? '70px' : '100px', backgroundColor: isMuted ? 'rgba(255, 60, 60, 0.4)' : 'rgba(60, 255, 60, 0.4)' }} 
-          onClick={() => setIsMuted(!isMuted)}
-        >
-          {isMuted ? '🔇 Unmute' : '🔊 Muted'}
-        </button>
-        <button className="skip-btn" onClick={() => setShowIntro(false)}>Skip</button>
-      </div>
-    );
-  }
-
   return (
-    <div className="app">
-      <Navbar />
-      <main className="main-content">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
-      <footer className="footer">
-        <p> Imran Maniyar © All Rights Reserved ❤️ {new Date().getFullYear()}</p>
-      </footer>
-    </div>
+    <>
+      {/* The main app loads in the background while the video plays on top */}
+      <div className="app" style={{ height: showIntro ? '100vh' : 'auto', overflow: showIntro ? 'hidden' : 'visible' }}>
+        <Navbar />
+        <main className="main-content">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+        </main>
+        <footer className="footer">
+          <p> Imran Maniyar © All Rights Reserved ❤️ {new Date().getFullYear()}</p>
+        </footer>
+      </div>
+
+      {/* The intro video sits securely on top of everything using fixed positioning and z-index */}
+      {showIntro && (
+        <div className="intro-video-container">
+          <video 
+            key={isMobile ? 'mobile' : 'desktop'}
+            className="intro-video" 
+            autoPlay 
+            muted={isMuted}
+            playsInline 
+            onEnded={() => setShowIntro(false)}
+          >
+            <source src={isMobile ? mobileVideo : introVideo} type="video/mp4" />
+          </video>
+          <button 
+            className="skip-btn" 
+            style={{ bottom: isMobile ? '70px' : '100px', backgroundColor: isMuted ? 'rgba(255, 60, 60, 0.4)' : 'rgba(60, 255, 60, 0.4)' }} 
+            onClick={() => setIsMuted(!isMuted)}
+          >
+            {isMuted ? '🔇 Unmute' : '🔊 Muted'}
+          </button>
+          <button className="skip-btn" onClick={() => setShowIntro(false)}>Skip</button>
+        </div>
+      )}
+    </>
   );
 }
 

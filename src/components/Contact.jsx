@@ -21,7 +21,7 @@ function Contact() {
     e.preventDefault();
     
     // Format the WhatsApp message
-    const phoneNumber = "YOUR_WHATSAPP_NUMBER_HERE"; // e.g. "919876543210" (no +, no spaces)
+    const phoneNumber = "919699150401"; // User's WhatsApp number with country code 91
     const text = `Hello Imran!\n\nName: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
