@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiPhone } from 'react-icons/fi';
 import './Contact.css';
 
 const contactLinks = [
   { icon: <FiMail size={15} />, label: 'imranmaniyar419@gmail.com', href: 'mailto:imranmaniyar419@gmail.com' },
   { icon: <FiGithub size={15} />, label: 'gitlab.com/imranmaniyar', href: 'https://github.com/Imran4819' },
   { icon: <FiLinkedin size={15} />, label: 'linkedin.com/in/imranmaniyar', href: 'https://www.linkedin.com/in/imran-maniyar-7b6862321 ' },
+  { icon: <FiPhone size={15} />, label: '+91 9699150401', href: 'tel:+919699150401' },
 ];
 
 function Contact() {
