@@ -4,7 +4,7 @@ import './Skills.css';
 const skillGroups = [
   {
     title: 'Backend',
-    skills: ['Java Spring Boot', 'Node.js', 'Fastify', 'REST APIs'],
+    skills: ['Java','Spring Boot','Maven', 'Node.js', 'Fastify', 'REST APIs'],
   },
   {
     title: 'Databases',
@@ -12,7 +12,7 @@ const skillGroups = [
   },
   {
     title: 'Languages',
-    skills: ['Java', 'JavaScript', 'SQL', 'HTML', 'CSS','Flutter'],
+    skills: ['Java','Node.js','JavaScript', 'SQL', 'HTML', 'CSS','Flutter','Dart',],
   },
   {
     title: 'Tools',
@@ -20,7 +20,7 @@ const skillGroups = [
   },
   {
     title: 'Messaging',
-    skills: ['Apache Kafka','Twillio'],
+    skills: ['Apache Kafka','Twillio','Brevo'],
   },
   {
     title: 'Auth & Security',
