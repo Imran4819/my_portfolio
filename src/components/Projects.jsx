@@ -4,6 +4,13 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'ManageKaro',
+    desc: 'A business management application featuring two primary modules: Driver & Trip Management (for dispatching and driver tracking) and Egg Farm Management. Developed using Flutter for the mobile client and Node.js for the backend with Neon DB (PostgreSQL). Deployed on Render with Brevo for email notifications and a free SMS API for communication.',
+    stack: ['Flutter', 'Node.js', 'Neon DB', 'Render', 'Brevo', 'SMS API'],
+    github: 'https://github.com/Imran4819',
+    live: 'https://github.com/Imran4819',
+  },
+  {
     name: 'SnapToShop — E-Commerce Backend',
     desc: 'Designed scalable backend architecture for a multi-user e-commerce platform. Implemented modular APIs for inventory, users, and search. Used PostgreSQL (Neon DB) for handling dynamic workloads.',
     stack: ['Node.js', 'PostgreSQL', 'Neon DB', 'REST APIs', 'GitLab'],
