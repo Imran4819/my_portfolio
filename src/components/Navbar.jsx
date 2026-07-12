@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import resumePdf from '../assets/Imran_Maniyar_Resumel.pdf';
 import './Navbar.css';
 import ThemeSwitcher from './ThemeSwitcher';
 
@@ -57,6 +58,13 @@ function Navbar() {
         </ul>
  
         <div className="navbar__actions">
+          <a
+            href={resumePdf}
+            download="Imran_Maniyar_Resume.pdf"
+            className="navbar__resume-btn"
+          >
+            Resume
+          </a>
           <ThemeSwitcher />
           <button
             className={`navbar__hamburger ${menuOpen ? 'navbar__hamburger--open' : ''}`}

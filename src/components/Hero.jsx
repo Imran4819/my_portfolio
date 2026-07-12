@@ -1,6 +1,8 @@
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
+import { FiDownload } from 'react-icons/fi';
 import avatarImg from '../assets/avatar.jpg';
+import resumePdf from '../assets/Imran_Maniyar_Resumel.pdf';
 import './Hero.css';
 
 function Hero() {
@@ -48,6 +50,15 @@ function Hero() {
             <Link to="contact" smooth={true} duration={400} offset={-80}>
               <button className="btn btn--outline">Get in Touch</button>
             </Link>
+            <a
+              href={resumePdf}
+              download="Imran_Maniyar_Resume.pdf"
+              className="btn btn--outline"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+            >
+              <FiDownload size={16} />
+              Download Resume
+            </a>
           </motion.div>
         </div>
 

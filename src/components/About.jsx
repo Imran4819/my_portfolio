@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
+import resumePdf from "../assets/Imran_Maniyar_Resumel.pdf";
 import "./About.css";
 
 const stats = [
   { num: "1+", label: "Year of experience" },
-  { num: "2+", label: "Key projects built" },
+  { num: "4+", label: "Key projects built" },
   { num: "8+", label: "Technologies mastered" },
 ];
 
@@ -33,6 +35,17 @@ function About() {
               systems, and optimizing database performance. Currently pursuing
               BCA from University of Mysore (Expected 2027).
             </p>
+            <div style={{ marginTop: "24px" }}>
+              <a
+                href={resumePdf}
+                download="Imran_Maniyar_Resume.pdf"
+                className="btn btn--primary"
+                style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
+              >
+                <FiDownload size={16} />
+                Download Resume
+              </a>
+            </div>
           </div>
           <div className="about__stats">
             {stats.map((s) => (
