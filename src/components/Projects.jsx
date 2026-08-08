@@ -5,6 +5,24 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'Maharashtra Tyres Website',
+    desc: 'A modern, responsive web application for Maharashtra Tyres providing an intuitive interface for customers to explore tire products, service offerings, and business inquiries. Built using React for optimum UI performance and dynamic user interactions.',
+    stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'GitLab'],
+    links: [
+      { url: 'https://gitlab.com/imranmaniyar', type: 'gitlab', label: 'Code Repository' },
+      { url: 'https://maharshtratyres.netlify.app/', type: 'live', label: 'Live Demo' }
+    ]
+  },
+  {
+    name: 'Maharashtra Tyres App',
+    desc: 'A comprehensive mobile application and backend system for Maharashtra Tyres. Built with Flutter for the mobile client and Node.js for backend REST APIs, powered by Neon DB (PostgreSQL), deployed on Render with Brevo integration for automated email notifications, and managed via GitLab.',
+    stack: ['Flutter', 'Node.js', 'Neon DB', 'Render', 'Brevo', 'GitLab'],
+    links: [
+      { url: 'https://gitlab.com/imranmaniyar', type: 'gitlab', label: 'Code Repository' },
+      { url: 'https://gitlab.com/imranmaniyar', type: 'live', label: 'Live Demo' }
+    ]
+  },
+  {
     name: 'ManageKaro',
     desc: 'A business management application featuring two primary modules: Driver & Trip Management (for dispatching and driver tracking) and Egg Farm Management. Developed using Flutter for the mobile client and Node.js for the backend with Neon DB (PostgreSQL). Deployed on Render with Brevo for email notifications and a free SMS API for communication.',
     stack: ['Flutter', 'Node.js', 'Neon DB', 'Render', 'Brevo', 'SMS API','Github','Gitlab'],
