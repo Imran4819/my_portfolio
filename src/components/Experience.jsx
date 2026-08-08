@@ -17,6 +17,12 @@ const education = [
     company: 'University of Mysore',
     desc: 'Studying core computer science subjects including data structures, algorithms, databases, and software engineering fundamentals.',
   },
+  {
+    date: '2024',
+    role: 'Higher Secondary Education (12th — Science)',
+    company: 'Pune University / Maharashtra Board',
+    desc: 'Completed 12th Grade with Science stream, focusing on Physics, Chemistry, Mathematics, and foundational science coursework.',
+  },
 ];
 
 function Experience() {
