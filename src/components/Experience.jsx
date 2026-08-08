@@ -42,6 +42,9 @@ function Experience() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
               <div className="exp-item__date">{exp.date}</div>
+              <div className="exp-item__timeline">
+                <div className="exp-item__dot" />
+              </div>
               <div className="exp-item__content">
                 <h3 className="exp-item__role">{exp.role}</h3>
                 <p className="exp-item__company">{exp.company}</p>
@@ -66,6 +69,9 @@ function Experience() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
               <div className="exp-item__date">{edu.date}</div>
+              <div className="exp-item__timeline">
+                <div className="exp-item__dot" />
+              </div>
               <div className="exp-item__content">
                 <h3 className="exp-item__role">{edu.role}</h3>
                 <p className="exp-item__company">{edu.company}</p>
